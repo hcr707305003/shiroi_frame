@@ -12,8 +12,6 @@
 require __DIR__ . '/shiroi/base.php';
 //加载模块操作
 require __DIR__ . '/shiroi/helper.php';
-//引入composer
-require __DIR__ . '/vendor/autoload.php';
 
 //注册加载
 \shiroi\library\Loader::register();

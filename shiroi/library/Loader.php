@@ -35,14 +35,12 @@ class Loader
      */
     public static function register($autoload = null)
     {
+        // Composer 自动加载支持
+        self::composer_load();
         // 自动加载
         spl_autoload_register($autoload ?: 'shiroi\library\Loader::autoload', true, true);
         //默认访问驱动
         self::access();
-        // Composer 自动加载支持
-        if (is_dir(VENDOR_PATH . 'vendor')) {
-
-        }
     }
 
     /**
@@ -58,6 +56,18 @@ class Loader
         $methodName = $methodName?$methodName:$config['default_action'];
         $namespace = DS.$filePath.DS.$className;
         (new $namespace())->$methodName();
+    }
+
+    /**
+     * 加载composer文件
+     */
+    private static function composer_load()
+    {
+        if (is_dir(rtrim(VENDOR_PATH,'/'))) {
+            if(file_exists(VENDOR_PATH . '/autoload' . EXT)){
+                require VENDOR_PATH . '/autoload' . EXT;
+            }
+        }
     }
 }
 
