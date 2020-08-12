@@ -1,0 +1,5 @@
+#忽略所有数据库日志提交
+/.idea
+/.svn
+/.git
+/vendor
