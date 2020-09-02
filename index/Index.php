@@ -1,15 +1,14 @@
 <?php
 namespace index;
 
-use shiroi\resource\FileHandle;
+use shiroi\resource\Mysql;
 
 class Index
 {
     public function index()
     {
-        $path = 'G:\Desktop\qqbot';
-        $target = 'd:/yftest';
-        $get = FileHandle::init($path)->getRawFiles();
-        var_dump($get);
+        $db = new Mysql();
+        $users = $db->get('user', 1);
+        var_dump($users);
     }
 }

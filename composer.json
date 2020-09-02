@@ -5,5 +5,8 @@
     "keywords": [
         "shiroi_frame"
     ],
-    "license": "MIT"
+    "license": "MIT",
+    "require": {
+        "thingengineer/mysqli-database-class": "^2.9"
+    }
 }

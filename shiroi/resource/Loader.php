@@ -36,7 +36,7 @@ class Loader
         if(file_exists($file_path)){
             require $file_path;
         }else{
-            echo '文件不存在!';exit();
+            echo '请 composer install 下载文件 或 检查代码！';exit();
         }
     }
 
