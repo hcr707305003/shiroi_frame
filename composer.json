@@ -1,5 +1,24 @@
 {
+    "name": "shiroi/shiroi_frame",
+    "type": "library",
+    "description": "Personal development of scaffolding",
+    "keywords": [],
+    "homepage": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shiroi",
+            "email": "707305003@qq.com",
+            "homepage": "https://shiroi.top",
+            "role": "Developer"
+        }
+    ],
     "require": {
-        "symfony/var-dumper": "^5.1"
+        "php": ">=5.6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ctwj": "src"
+        }
     }
 }
